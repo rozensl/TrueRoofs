@@ -1,11 +1,6 @@
 <?php
-	// begin the session to access the variables 
 	session_start(); 
-	// echo "<pre>";
-	// print_r($_SESSION);
-	// exit();
-	// connection
-	include '4WW3_project/assets/php/pdoConnect.php';
+	include 'resources/assets/php/pdoConnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
