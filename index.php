@@ -8,7 +8,7 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="description" content="Reviewing estate listings">
 	<meta name="keywords" content="4WW3">
-	<meta name="author" content="Lin Rozenszajn and Abeer Al Yasiri">
+	<meta name="author" content="Lin Rozenszajn and Abeer A-Y">
 	<!--To make the view fit to screen of the device-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Main Page</title>
@@ -16,7 +16,7 @@ session_start();
 	<!-- javascript file -->
 	<script type="text/javascript" src="4WW3_project/assets/js/main.js" async></script> 
 	<!--styling to the main page-->
-	<link href="4WW3_project/assets/css/mainStyle.css" rel="stylesheet" />
+	<link href="resources/assets/css/mainStyle.css" rel="stylesheet" />
 	<!--load icon library for search bar-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css"
@@ -29,7 +29,7 @@ session_start();
 <body>
 	<!--include header-->
 	<?php
-		include "4WW3_project/assets/php/header.php";
+		include "resources/assets/php/header.php";
 	?>
 
 	<!--Search bar of the estates-->
