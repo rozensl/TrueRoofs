@@ -14,7 +14,7 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Submit Review">
 		<meta name="keywords" content="4WW3">
-		<meta name="author" content="Abeer Al Yasiri">
+		<meta name="author" content="Abeer A-Y and Lin Rozenszajn">
 		<!--To make the view fit to screen of the device-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Submit Page</title>
