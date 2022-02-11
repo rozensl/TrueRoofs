@@ -1,0 +1,21 @@
+/*styling the image sizing and formating */
+.profile img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	vertical-align: middle;
+	padding: 10px;
+}
+/*formating the info text */
+.profile {
+	padding-bottom: 4vh;
+    text-align: center;
+    color: white;
+    margin: 0;
+    top: 12vh;
+}
+/*formating animation for hovering over the button */
+.profile button:hover {
+	animation: shakeX;
+	animation-duration: 2s;
+}

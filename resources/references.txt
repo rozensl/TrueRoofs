@@ -1,0 +1,57 @@
+Resources:
+	Abeer -- search.html, signin.html, submit.html, submitListing.html, test.html, userRegisteration.html, header_footer.css, 
+		mainStyle.css, profile.css, userRegisteration.css, the same files in php
+			* https://www.codegrepper.com/code-examples/html/change+html+page+on+button+click
+			* https://www.w3schools.com/cssref/default.asp (many of the sections on this page)
+				** Ex: https://www.w3schools.com/cssref/pr_class_display.asp
+				** Ex: https://www.w3schools.com/css/css_form.asp
+				** Ex: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_responsive
+			* https://www.w3schools.com/html/default.asp (many of the sections on this page)
+				** Ex: https://www.w3schools.com/html/html_form_input_types.asp
+			* https://www.youtube.com/watch?v=G3KxOexU8ds
+			* https://html-color.codes/
+			* https://www.w3schools.com/howto/default.asp (many of the sections on this page)
+				** Ex: https://www.w3schools.com/howto/howto_css_rounded_images.asp
+				** Ex: https://www.w3schools.com/howto/howto_css_signup_form.asp
+			* https://www.youtube.com/watch?v=3qmL-ebPYzw
+			* https://www.w3.org/Style/Examples/007/center.en.tmpl
+			* https://www.youtube.com/watch?v=O-QUBZuZlXM&list=LL&index=1&t=6s
+			* https://www.youtube.com/watch?v=L5WWrGMsnpw&list=LL&index=4&t=918s
+			* https://www.youtube.com/watch?v=YOb67OKw62s&list=LL&index=7
+			* https://www.youtube.com/watch?v=G3KxOexU8ds&t=277s
+			* https://www.youtube.com/watch?v=bn-DQCifeQQ
+			* https://www.youtube.com/watch?v=qJVVZYTYA9U&t=218s
+			* https://www.youtube.com/watch?v=FVH-tXVRErg
+			* https://www.youtube.com/watch?v=ijZEX6KltrQ&t=252s
+			* https://www.youtube.com/watch?v=TCheMkFuUQc&t=37s
+			* https://www.youtube.com/watch?v=DonxmmWW7Tk&t=109s
+			* https://www.youtube.com/watch?v=8QKOaTYvYUA&t=640s
+			* https://www.youtube.com/watch?v=FEmysQARWFU&t=1141s
+			* https://www.w3resource.com/javascript/form/password-validation.php
+			* http://html5doctor.com/css3-pseudo-classes-and-html5-forms/
+			* https://www.javascripttutorial.net/javascript-dom/javascript-form/ 
+			* https://newbedev.com/regular-expression-for-matching-latitude-longitude-coordinates
+			* https://newbedev.com/regular-expression-for-address-field-validation
+			* https://www.w3schools.com/html/html5_geolocation.asp
+			* https://animate.style/#javascript
+			* https://tobiasahlin.com/moving-letters/#3
+			************************************************************************
+			*****PART3*****
+			* https://www.tutsmake.com/how-to-install-phpmyadmin-amazon-ec2-ubuntu/
+			* https://stackoverflow.com/questions/5814155/how-to-get-the-file-path-in-html-input-type-file-in-php
+			* https://www.geeksforgeeks.org/how-to-pop-an-alert-message-box-using-php/
+			* https://zetcode.com/php/pdo/
+			* https://www.youtube.com/watch?v=ug4Vye3fsS4
+			* https://www.youtube.com/watch?v=aPBFqDIIPYE
+			* https://gist.github.com/keithweaver/70eb06d98b008113ce97f6148fbea83d
+			* https://gist.github.com/keithweaver/87c5af35f70aac32b4e621fc9fa3b568
+			* https://github.com/keithweaver/python-aws-s3
+			* https://docs.sevenbridges.com/docs/enabling-cross-origin-resource-sharing-cors
+			* https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/getting-started_installation.html
+			* https://getcomposer.org/download/
+			* https://phoenixnap.com/kb/install-php-7-on-ubuntu
+			* https://www.phptutorial.net/php-pdo/php-fetchall/
+			* 
+
+	Lin -- result.html, individualResult.html, result.css, individualResult.css, the same files in php
+			* https://www.youtube.com/watch?v=2nrwFysevXI&ab_channel=MonashUniversity

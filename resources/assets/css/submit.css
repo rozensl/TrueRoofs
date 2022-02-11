@@ -1,0 +1,88 @@
+/*styling for the form box on the page*/
+/*specifying styling of the section where the form will be*/
+.submission-container {
+	background-color: #E8E8E8;
+	margin: auto;
+	max-width: 85%;
+	padding: 20px;
+}
+/*column for the titles of what to enter*/
+.title-line-form {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+/*column for the input box*/
+.field-line-form {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/*clear the floats after the column*/
+.line-form:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/*formating the input box or field*/
+input[type=text], textarea, input[type=file], input[type=url], select {
+	width: 100%;
+	padding: 12px;
+	border: 0.5em solid #B0B0B0;
+	border-radius: 4px;
+	resize: vertical;
+}
+/*displaying title within the column of titles*/
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+/*changing the input box upon clicking to type*/
+input[type=text]:focus {
+	border: 0.5em solid #555;
+}
+
+textarea:focus {
+	border: 0.5em solid #555;
+}
+
+select:focus {
+	border: 0.5em solid #555;
+}
+
+input[type=url]:focus {
+	border: 0.5em solid #555;
+}
+/*styling the submit button*/
+input[type=submit] {
+	background-color: var(--background);
+	color: #ffffff;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+/*hover action on the submit button*/
+.line-form input[type=submit]:hover {
+	background-color: #008080;
+	animation: heartBeat;
+	animation-duration: 2s;
+}
+/*hover action on the my location button*/
+.line-form .useLocationBtn:hover {
+	background-color: #008080;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 5px;
+	color: #ffffff;
+}
+
+/*responsive screen to stack rows and submit button when small screen*/
+@media screen and (max-width: 600px) {
+	.title-line-form, .field-line-form, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}

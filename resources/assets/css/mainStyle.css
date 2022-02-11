@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*variable to use within the css file*/
+
+:root {
+	--background: rgb(0, 214, 170);
+}
+
+/*reset for the box sizing*/
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.main {
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	position: relative;
+	height: 100%;
+}
+
+/*Beginning of nav bar*/
+
+/*set the styling of the nav bar */
+
+header {
+	background: var(--background);
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	/*set to large number to ensure it stays at the top of everyhting in the page*/
+	width: 100%;
+}
+
+/*the styling will first be set for mobile or small screen*/
+
+/*make the check box disappear because it looks ugly to use the checkbox for the dropdown*/
+
+.nav-toggle {
+	display: none;
+}
+
+/*how to position the icon of the hamburger*/
+
+.nav-toggle-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	/*to center the hamburger*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/*select all the span elements and draws the middle span line*/
+
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+	display: block;
+	background: white;
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
+	/*for the span in the middle so we can position the other lines accordingly*/
+}
+
+/*how to set the spans to work without defaults to empty and not showing up now we have all three in the middle*/
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+	content: '';
+	position: absolute;
+	/*makes sure to position around the first line*/
+}
+
+/*select each span line and split to bottom and top */
+
+.nav-toggle-label span::before {
+	bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+	top: 7px;
+}
+
+/*styling for the tabs on the nav bar*/
+
+nav {
+	position: absolute;
+	/*to position the tab on and relative to the header*/
+	text-align: left;
+	/*makes it look more neat than the center*/
+	top: 100%;
+	/*to align the dropdown mobile button from the bar*/
+	left: 0;
+	/*gives more control to how we position the button*/
+	background: var(--background);
+	width: 100%;
+	transform: scale(1, 0);
+	/*goes full width and 0 vertically */
+	transform-origin: top;
+	/*opens from the top of the hamburger*/
+	transition: transform 200ms ease-in-out;
+	/*action of showing and hiding*/
+}
+
+/*top and on the side by removing the styling of the lists*/
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*spacing between the tabs*/
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+/*the styling of the text of the tabs*/
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+/*change the color to black for the tabs*/
+
+nav a:hover {
+	color: #000;
+}
+
+/*checks that nav toggle checkbox is clicked and if so then the ~ looks for any precedding sibling it doesn't have to be immediately after*/
+
+.nav-toggle:checked~nav {
+	transform: scale(1, 1);
+	/*it will display the nav tabs bar toggle*/
+}
+
+/*code for nav bar on big screen https://www.youtube.com/watch?v=8QKOaTYvYUA*/
+
+@media screen and (min-width: 900px) {
+	/*no need for the dropdown tabs*/
+	.nav-toggle-label {
+		display: none;
+	}
+	/*diplay the header as 3 column spacing*/
+	header {
+		position: fixed;
+		display: grid;
+		/*makes soacing propoortionate when screen size increase*/
+		grid-template-columns: 0.75fr auto minmax(600px, 3fr) 20px;
+	}
+	/*logo goes  spacing 1 to 3*/
+	.logo {
+		grid-column: 1 / 3;
+	}
+	nav {
+		/* all: unset; /* this causes issues with Edge, since it's unsupported */
+		/* the following lines are not from the link, add Edge support */
+		position: relative;
+		text-align: left;
+		transition: none;
+		transform: scale(1, 1);
+		background: none;
+		top: initial;
+		left: initial;
+		/* end Edge support stuff */
+		/*takes space form 3 to 4 spacing*/
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		/*center it on flex end*/
+	}
+	nav ul {
+		display: flex;
+	}
+	/*to spread out the tabs*/
+	nav li {
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
+	/*styling for the tabs text*/
+	nav a {
+		opacity: 1;
+		position: relative;
+	}
+	/*animate the action the tabs*/
+	nav a::before {
+		content: '';
+		display: block;
+		height: 5px;
+		background: black;
+		position: absolute;
+		top: -.75em;
+		left: 0;
+		right: 0;
+		transform: scale(0, 1);
+		transition: transform ease-in-out 100ms;
+	}
+	/*does the animation upon the hovering*/
+	nav a:hover::before {
+		transform: scale(1, 1);
+	}
+}
+
+/*End of nav bar*/
+
+/*Search page section*/
+
+/*start to positioning section*/
+
+.main-container {
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	overflow: hidden;
+}
+
+/*start to position the bar on the section*/
+
+.search {
+	width: 80%;
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+/*formating the title*/
+
+.search-title {
+	color: white;
+	text-align: center;
+	font-size: 5vh;
+}
+
+/*formating the bar*/
+
+form.search-bar {
+	height: auto;
+}
+
+/*formating the input box*/
+
+form.search-bar input[type=text] {
+	width: 70%;
+	float: left;
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	background: #f1f1f1;
+}
+
+/*formating the button for submiting the search*/
+
+form.search-bar button {
+	width: 30%;
+	float: left;
+	padding: 12px;
+	background: var(--background);
+	color: white;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+}
+
+/*functionality of the button upon hovering*/
+
+form.search-bar button:hover {
+	background: #008080;
+}
+
+/*for small screen sizes reposition how things are spaced*/
+
+@media screen and (max-width: 600px) {
+	.map {
+		padding-top: 0%;
+	}
+	.search-title {
+		padding-top: 0%;
+	}
+	form.search-bar {
+		padding-top: 0%;
+	}
+	form.search-bar input[type=text]::placeholder {
+		font-size: 12px;
+	}
+}
+
+/*end search bar */
+
+/*search by user location button*/
+
+div#map_button {
+	height: fit-content;
+	color: white;
+	margin: 0 auto;
+	width: fit-content;
+	padding: 1vh 1vw;
+	background-color: rgb(0, 214, 170);
+	outline: 1px solid gray;
+}
+
+div#map_button:hover{
+	cursor:pointer;
+	background-color: #008080
+}
+
+div#map_button:active{
+	background-color: #008080;
+}
+
+/*beginning to positioning the filtering of the map and map section*/
+
+.map {
+	position: relative;
+	clear: both;
+}
+
+/*position on the filters*/
+
+.map-checks {
+	margin: auto;
+	width: 100%;
+	height:15vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+/*formating the title of the filters*/
+
+.map h3 {
+	margin: 0;
+	color: white;
+	text-align: center;
+}
+
+/*position the filters and formating them*/
+
+form.map-filter {
+	color: white;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/*to update the dynamic map with the checkboxes */
+
+form.map-filter button {
+	background: var(--background);
+	color: white;
+	border: 1px solid grey;
+	cursor: pointer;
+}
+
+form.map-filter button:hover{
+	background-color: #008080;
+}
+
+/*position fake map*/
+
+#mapholder {
+	height: 60vh; 
+	margin: 0 1vw;
+	z-index: 0;
+}
+
+/*small screen styling*/
+
+@media screen and (max-width: 600px) {
+	#mapholder {
+		height: 40vh;
+		max-width: 100%;
+		z-index: 0;
+	}
+	.map-checks {
+		margin: auto;
+		padding: 10px;
+		width: 100vw;
+	}
+}
+
+/*start footer*/
+
+/*positioning the footer text box*/
+
+.footer-container {
+	padding: 50px 0;
+	max-width: 85%;
+	margin: auto;
+}
+
+/*how to shop the columns*/
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*to fix the list styling*/
+
+.footer-container ul {
+	list-style: none;
+	/* to remove indents from the unordered list */
+	padding-left: 0;
+}
+
+/*imprtance of happing a page*/
+
+.footer {
+	position: relative;
+	overflow: hidden;
+	background-color: #24262b;
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*information section formting*/
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+/*info of the column*/
+
+.footer-col h4 {
+	font-size: 18px;
+	color: white;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 600;
+	position: relative;
+}
+
+/*css animation*/
+
+.footer-col h4::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+/*formating the last item in the list to not be over */
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/*how to show the stamp */
+
+.footer-col ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+/*animation of css*/
+
+.footer-col ul li a:hover {
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+/*info on the predicated for 2 dundle */
+.footer-col .social-links a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.3s ease;
+}
+/*animation of css*/
+
+.footer-col .social-links a:hover {
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*manage screen*/
+
+@media screen and (max-width: 600px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.footer-col {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.main-container {
+		height: 100%;
+	}
+}
+
+/*end footer*/
+
+© 2021 GitHub, Inc. Terms

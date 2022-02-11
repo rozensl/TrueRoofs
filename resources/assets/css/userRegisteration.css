@@ -1,0 +1,148 @@
+/*registration block background and styling*/
+.registration {
+	position: relative; 
+	margin: auto;
+	width: 100%;
+	height: 160vh;
+	/*to add a layer over the background image we will use gradient blurred*/
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../images/buildings.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/*registration box on the block*/
+.reg-form {
+	background-color: #e3e3e3;
+	margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	max-width: 40%;
+	max-height: 90%;
+	padding: 40px;
+	position: relative; 
+}
+/*title of the type of registration*/
+.reg-type {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 30px;
+}
+/*styling intro message*/
+.message {
+	text-align: center;
+	font-size: 18px;
+	padding-bottom: 1.5em;
+}
+/*positioning the submit button*/
+.submit-button {
+	text-align: center;
+	padding: 1em;
+}
+/*formating the submit button*/
+input[type=submit] {
+	background-color: var(--background);
+	color: #ffffff;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 50%;
+}
+/*submit button hover action*/
+input[type=submit]:hover {
+	background-color: #005c5c;
+}
+/*formating the title of the input box*/
+.title-label{
+	text-align: center; 
+	color: #ffffff;
+	padding: 15px;
+	font-weight: bolder;
+}
+/*position the input box*/
+.field-input {
+	text-align: center;
+	padding: 5px;
+}
+/*formating the input box*/
+.field-input input {
+	font-size: 16px;
+	border-radius: 4px;
+	border-color: #005c5c;
+}
+/*when typing into the input box*/
+.field-input input:focus {
+	border: 0.15em solid var(--background);
+	outline: none;
+}
+/*formating the text and colors if the title box*/
+.title-label label{
+	background-color: #005c5c;
+	border-radius: 7px;
+	padding: 8px;
+	font-size: 17px;
+}
+/*positioning the checkbox*/
+.remember {
+	text-align: center;
+	padding: 10px;
+	padding-top: 15px;
+}
+/*cursor on the box*/
+.remember input {
+	cursor: pointer;
+}
+/*positioning the link to switching between the types of registration*/
+.switch-type {
+	text-align: center;
+	padding: 10px;
+}
+/*formating the link*/
+.switch-type a {
+	text-decoration: none;
+	color: #005c5c;
+}
+/*hovering action on the link*/
+.switch-type a:hover {
+	color: var(--background);
+}
+/*resizing for small sceens*/
+@media screen and (max-width: 626px) {
+	.registration {
+		height: 120vh;
+	}
+	.reg-form {
+		background-color: #e3e3e3;
+		margin: 0;
+		/*recentering*/
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		/*resize the space it takes*/
+		max-width: 80%;
+		max-height: 90%;
+		padding: 40px;
+		position: relative; 
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.registration {
+		height: 140vh;
+	}
+	.reg-form {
+		background-color: #e3e3e3;
+		margin: 0;
+		/*recentering*/
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		/*resize the space it takes*/
+		max-width: 90%;
+		max-height: 90%;
+		padding: 40px;
+		position: relative; 
+	}
+}
